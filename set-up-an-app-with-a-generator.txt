@@ -1,0 +1,38 @@
+https://www.linkedin.com/learning/mean-stack-and-mongodb-development-techniques/set-up-an-app-with-a-generator
+
+npm install -g yo // install yeoman
+
+npm install -g gulp bower generator-gulp-angular
+
+yo gulp-angular my-message-front
+
+... after installing packages run ...
+
+gulp
+
+gulp serve
+
+=================================================================
+
+Transcripts
+
+Set up an app with a generator
+- [Voiceover] Now that Yeoman is installed, we can next install a generator with it. Let's head over to the Yeoman.io website, and then we can click on Discovering Generators. We can see the different options available. We'll be using the gulp-angular generator, which is located right here. It will save us a lot of time in setting up some tedious tasks that make our development process must faster using gulp. If you haven't heard of gulp or grunt before, they allow us to automate tedious or repetitive tasks such as moving files over to a published folder or linking libraries or packages we might need in our app.
+
+This generator has several requirements and dependencies. Let's click on the gulp-angular generator to take a look at those. As we can see, we'll need to install gulp and bower in order to use it, so let's open up our command prompt in order to do that. Let's type in, npm install -g for global, and then gulp. As mentioned before, gulp is the task runner, and we'll also need to install bower, so I'll type that in there so we can install both at the same time.
+
+Bower is a package manager that we will use for the front end and to get packages that work with Angular, and finally, I'll install the generator, which is generator-gulp-angular. Once the installation is complete, we can go ahead and create our mean stack project by typing yogulp angular, but first let's make a project folder that will contain both the front end and back end. I will be keeping the front end and back end separate so that they have their own separate git repositories and editor windows.
+
+So feel free to pick whatever location you like on your drive, and inside let's create our front end folder. And now let's copy this location, and we will navigate to it inside our command prompt, and I'll just paste that in there. Now let's create our angular front end with the generator. I'll type in yo gulp-angular and then let's give it a title. I'll call it my-message-front. As we create the app, we will get asked several questions by the generator.
+
+After getting asked about collecting usage statistics, you will get asked about what version of Angular we would like to use. I will select 1.5 since it's the latest stable release at the time of this course production. Next we are asked what extra angular modules we would like to include by default. To start with, I will deselect them all so that we can keep it simple. We will then be asked about jquery. I will choose not to use it once again to keep things simple to start with. Also, Angular has its own light version. Next we are asked how we would like to handle REST full requests.
+
+Since Angular comes with its own http support, I will once again keep it simple and use that by default. We are now asked what Angular router we would like to use. A router in Angular allows us to navigate across multiple views using different URL locations. The default router in Angular ngRouter was quickly replaced as the router of choice by community with a third party UI router which offers more straightforward and powerful features. So we will select UI Router. Next we are asked what UI or user interface framework we would like to use with Angular.
+
+I have selected Bootstrap, since it currently has the greatest support, and I have used it extensively. After selecting Bootstrap, we are asked what Javascript component of Bootstrap we would like to use. These give us interactive functionality to our Bootstrap UI, such as drop-downs, for example. Both Angular UI and Angular Strap are very similar and only vary slightly by some UI features. I will select Angular UI Bootstrap since I have used it several times before. Next we are asked what we would like to write style sheets with.
+
+Since Sass for Node gives us a bit more power yet allows us to write style sheets using traditional CSS, it's a good choice, and since we aren't forced to learn anything new, but still have that extra power and flexibility in case we do need it. Then we are asked what we would like to write our scripts in. I will select Babel instead of the other options, since the other options, such as Typescript and CoffeeScript add syntactic sugar on top of JavaScript, and so it allows us to make things that more resemble classes, as in .net, for example. Babel, on the other hand, just in a sense lets us work with the latest features of JavaScript ES6 without adding any syntactic sugar on top.
+
+Since our focus in this course is the mean stack and not learning a new language or a variation on top of JavaScript, I'll stick to the more traditional JavaScript syntax and use Babel. Next we are asked what we would like to write our mark-up in. Once again, I will keep it simple and select HTML since it's more traditional and does not require any new teaching points for the majority of us. Give it a minute or two to install all the packages needed for our app. Now that the installation is complete, let's go ahead and initialize everything with the gulp command.
+
+If you get any errors with Bower, you might need to do a bower install prior to calling gulp. Next let's go ahead and try out our app by typing gulp serve, and this should automatically launch the browser for us. As we can see, the demo application is showing, and if everything is working for you as it is for me, let's move on to creating our first git repository for our project.
